@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(){
+  int num[10];
+  int a = 0, *b, *c;
+  b = num;
+  c = num;
+  printf("*** Enter 10 numbers ***\n\n");
+  for(int i=0; i<10; i++){
+    printf("%d) Enter a number : ",i+1);
+    scanf("%d", &num[i]);
+  }
+  printf("\nData in array : ");
+  while(a<10){
+    printf(" %d", num[a]);
+    a++;
+  }
+  a = 2;
+  printf ("\nResult : ");
+  for(int i=0; i<10; i++){
+    if(*(b+i)%2 != 0 && *(c+a)%2 != 0){
+      printf(" %d", num[i+1]);
+    }
+    a++;
+  }
+    return 0;
+}
